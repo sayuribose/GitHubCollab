@@ -9,7 +9,23 @@ import SwiftUI
 
 struct DistractView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack {
+                Spacer()
+                
+                    Text("Distractedness")
+                        .foregroundStyle(.white)
+                        .fontWeight(.heavy)
+                        .font(.system(size: 45))
+                
+                Spacer()
+    
+            }
+            .padding(.vertical, 10)
+            .padding()
+            .background(Color(hue: 0.756, saturation: 0.214, brightness: 0.971))
+            Spacer()
+        }
     }
 }
 
