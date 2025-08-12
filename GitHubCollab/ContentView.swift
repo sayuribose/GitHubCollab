@@ -79,10 +79,18 @@ struct ContentView: View {
                 }
             }
             
+<<<<<<< Updated upstream
         }
+=======
+        } 
+        
+>>>>>>> Stashed changes
     }
 }
 
 #Preview {
     ContentView()
 }
+
+
+
