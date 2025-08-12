@@ -9,8 +9,24 @@ import SwiftUI
 
 struct PanickAttackView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack {
+                Spacer()
+                Text("Panic Attack")
+                    .foregroundStyle(.white)
+                    .fontWeight(.heavy)
+                    .font(.system(size: 55))
+                Spacer()
+    
+            }
+            .padding(.vertical, 20)
+            .padding()
+            .background(Color(hue: 0.936, saturation: 0.43, brightness: 0.966))
+            Spacer()
+        }
+    
     }
+        
 }
 
 #Preview {
