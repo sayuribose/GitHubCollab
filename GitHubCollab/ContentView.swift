@@ -19,7 +19,7 @@ struct ContentView: View {
                             Image("logo")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 300, height: 150)
+                                .frame(width: 310, height: 150)
                                 .padding(.top, -125) // pushes image down from very top
                                 .padding(.trailing, 250) // pushes image left from the right edge
                         }
