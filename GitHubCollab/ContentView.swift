@@ -91,7 +91,7 @@ struct ContentView: View {
                                     .padding(.top, 20.0)
                                     .padding(.bottom, 20.0)
                                     .background(Color.purple)
-                                    .font(.title)
+                                      .font(.title)
                                     .cornerRadius(95)
                                 
                                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
@@ -104,6 +104,10 @@ struct ContentView: View {
                     }
                 }
             } // end of VStack
+            // custumize back button
+        .navigationTitle("Home")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true) // hides Home title from user in root view
         } // end of NavStack
         }
         } 
