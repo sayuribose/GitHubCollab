@@ -12,6 +12,7 @@ struct PanickAttackView: View {
         VStack{
             HStack {
                 Spacer()
+
                 Text("Panic Attack")
                     .foregroundStyle(.white)
                     .fontWeight(.heavy)
@@ -22,6 +23,20 @@ struct PanickAttackView: View {
             .padding(.vertical, 20)
             .padding()
             .background(Color(hue: 0.936, saturation: 0.43, brightness: 0.966))
+
+                
+                    Text("Panic Attack")
+                        .foregroundStyle(.white)
+                        .fontWeight(.heavy)
+                        .font(.system(size: 55))
+                
+                Spacer()
+    
+            }
+            .padding(.vertical, 10)
+            .padding()
+            .background(Color(hue: 0.933, saturation: 0.214, brightness: 0.971))
+
             Spacer()
         }
     

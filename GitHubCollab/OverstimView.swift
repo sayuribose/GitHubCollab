@@ -9,10 +9,25 @@ import SwiftUI
 
 struct OverstimView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack {
+                Spacer()
+                
+                Text("Overstimulation")
+                    .foregroundStyle(.white)
+                    .fontWeight(.heavy)
+                    .font(.system(size: 45))
+                
+                Spacer()
+                
+            }
+            .padding(.vertical, 10)
+            .padding()
+            .background(Color(hue: 0.546, saturation: 0.24, brightness: 1.0))
+            Spacer()
+        }
     }
 }
-
 #Preview {
     OverstimView()
 }
