@@ -13,10 +13,10 @@ struct AnxietyAttackView: View {
             HStack {
                 Spacer()
                 
-                    Text("Axiety Attack")
+                    Text("Anxiety Attack")
                         .foregroundStyle(.white)
                         .fontWeight(.heavy)
-                        .font(.system(size: 50))
+                        .font(.system(size: 45))
                 
                 Spacer()
     
@@ -25,6 +25,9 @@ struct AnxietyAttackView: View {
             .padding()
             .background(Color(hue: 0.289, saturation: 0.283, brightness: 0.915))
             Spacer()
+            ScrollView{
+                //Text("hi")
+            }
         }
     }
 }

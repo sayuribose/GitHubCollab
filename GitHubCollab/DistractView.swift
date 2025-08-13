@@ -25,6 +25,9 @@ struct DistractView: View {
             .padding()
             .background(Color(hue: 0.756, saturation: 0.214, brightness: 0.971))
             Spacer()
+            ScrollView{
+                //Text("hi")
+            }
         }
     }
 }
