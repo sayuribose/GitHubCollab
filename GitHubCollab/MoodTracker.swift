@@ -6,36 +6,86 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MoodTracker: View {
+    
+    @State private var showNewMood = false
+    @Query var moods: [MoodItem]
+    
     var body: some View {
         VStack{
             HStack {
-                Spacer()
                 Text("My Moods")
                     .foregroundStyle(.white)
                     .fontWeight(.heavy)
-                    .font(.system(size: 55))
+                    .font(.system(size: 50))
+                    .padding(.horizontal, 10)
                 Spacer()
-                Text(" + ")
-                    .padding(.horizontal,10)
-                    .padding(.vertical,8)
-                    .font(.title)
-                    .fontWeight(.black)
-                    .foregroundColor(Color.gray)
-                    .background(Color.white)
-                    .cornerRadius(30)
-    
+                Button {
+                    withAnimation {
+                        showNewMood = true
+                    }
+                } label: {
+                    Text("+ ")
+                        .padding(.horizontal,10)
+                        .padding(.vertical,5)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.blue)
+                        .background(Color.white)
+                        .cornerRadius(30)
+                }
+                
             }
-            .padding(.vertical, 20)
+            .padding(.vertical, 10)
             .padding()
             .background(Color.gray)
             Spacer()
+            
+            List{
+                
+                ForEach (moods) {moodItem in
+                    if moodItem.mood==3 {
+                        ZStack {
+                            Color(.systemPurple)
+                                .ignoresSafeArea()
+                                
+                            VStack(spacing: 20.0) {
+                                HStack() {
+                                    Text(moodItem.desc)
+                                        .font(.title)
+                                        .fontWeight(.bold)
+                                        .multilineTextAlignment(.leading)
+                                    Spacer()
+                                    Text(moodItem.desc)
+                                        .multilineTextAlignment(.trailing)
+                                }
+                                Text(moodItem.desc)
+                            }
+                            .padding(15)
+                            .background(Rectangle()
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                                .shadow(radius: 10)
+                            ).padding(15)
+                        }
+                    } else {
+                        Text(moodItem.desc)
+                    }
+                }
+            }
+            .listStyle(.plain)
+            if showNewMood {
+                NewMood(moodItem: MoodItem(mood:3, desc: "", entryDate: Date.now))
+                
+            }
+            
         }
-    
     }
+    
 }
-
 #Preview {
-    MoodTracker()
-}
+        MoodTracker()
+            .modelContainer(for: MoodItem.self, inMemory: true)
+    }
