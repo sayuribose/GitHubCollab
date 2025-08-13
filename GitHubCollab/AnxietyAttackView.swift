@@ -26,7 +26,30 @@ struct AnxietyAttackView: View {
             .background(Color(hue: 0.289, saturation: 0.283, brightness: 0.915))
             Spacer()
             ScrollView{
-                //Text("hi")
+                Text("ADD VIDEO HERE")
+                
+                VStack{
+                    Text("Adittional Methods")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.black)
+                            .padding(.horizontal, 50.0)
+                            .padding(.top, 20.0)
+                            .padding(.bottom, 20.0)
+                            .background(Color(hue: 0.289, saturation: 0.283, brightness: 0.915))
+                            .font(.title2)
+                            .cornerRadius(95)
+                            .padding(.vertical, 200)
+                    Text("   Resoruces   ")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.black)
+                            .padding(.horizontal, 50.0)
+                            .padding(.top, 20.0)
+                            .padding(.bottom, 20.0)
+                            .background(Color(hue: 0.289, saturation: 0.283, brightness: 0.915))
+                            .font(.title2)
+                            .cornerRadius(95)
+                } // end of vstack
+
             }
         }
     }
