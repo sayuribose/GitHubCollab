@@ -13,6 +13,7 @@ struct PanickAttackView: View {
             
             VStack{
                 
+<<<<<<< HEAD
                 HStack {
                     Spacer()
                     
@@ -25,11 +26,18 @@ struct PanickAttackView: View {
                     
                 }
                 
+=======
+                Text("Panic Attack")
+                    .foregroundStyle(.white)
+                    .fontWeight(.heavy)
+                    .font(.system(size: 45))
+>>>>>>> main
                 
                 .padding(.vertical, 10)
                 .padding()
                 .background(Color(hue: 0.933, saturation: 0.214, brightness: 0.971))
                 Spacer()
+<<<<<<< HEAD
                 ScrollView{
                     //Text("hi")
             }
@@ -38,6 +46,20 @@ struct PanickAttackView: View {
         }
     }
 }
+=======
+                
+            }
+            .padding(.vertical, 10)
+            .padding()
+            .background(Color(hue: 0.891, saturation: 0.24, brightness: 1.0))
+            Spacer()
+        }
+        }
+    
+    }
+        
+
+>>>>>>> main
 
 #Preview {
     PanickAttackView()
