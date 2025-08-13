@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct AnxietyAttackView: View {
+    
+        private let player = AVPlayer(url: Bundle.main.url(forResource: "3 min belly", withExtension: "mp4")!)
+
     var body: some View {
         VStack{
             HStack {
@@ -24,11 +28,21 @@ struct AnxietyAttackView: View {
             .padding(.vertical, 10)
             .padding()
             .background(Color(hue: 0.289, saturation: 0.283, brightness: 0.915))
-            Spacer()
+            
+            
+            
             ScrollView{
-                Text("ADD VIDEO HERE")
                 
-                VStack{
+                // isert text here
+                VStack(spacing: 30){
+                    
+                    VideoPlayer(player: player)
+                                            .frame(height: 250)
+                                            .cornerRadius(12)
+                                            .padding(.horizontal)
+                                            .onAppear {
+                                                player.play()
+                                            }
                     Text("Adittional Methods")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
