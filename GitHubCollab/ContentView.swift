@@ -12,7 +12,11 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 ZStack{
-                    Image("daisy") // possibily change later
+                    Color(.yel)
+                    Image("testing2")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width:100, height: 900)// possibily change later
                     VStack{
                         HStack {
                             Spacer() // pushes image to the right
