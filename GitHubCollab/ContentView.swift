@@ -15,13 +15,13 @@ struct ContentView: View {
                     Image("daisy") // possibily change later
                     VStack{
                         HStack {
-                                                        Spacer() // pushes image to the right
-                                                        Image("logo")
-                                                            .resizable()
-                                                            .aspectRatio(contentMode: .fit)
-                                                            .frame(width: 310, height: 150)
-                                                            .padding(.top, -125) // pushes image down from very top
-                                                            .padding(.trailing, 250) // pushes image left from the right edge
+                            Spacer() // pushes image to the right
+                            Image("logo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 310, height: 150)
+                                .padding(.top, -125) // pushes image down from very top
+                                .padding(.trailing, 250) // pushes image left from the right edge
                                                     }
                             Text("MyMind")
                                 .font(.largeTitle)
@@ -35,7 +35,7 @@ struct ContentView: View {
                                         .padding(.horizontal, 50.0)
                                         .padding(.top, 20.0)
                                         .padding(.bottom, 20.0)
-                                        .background(Color.pink)
+                                        .background(Color(hue: 0.933, saturation: 0.214, brightness: 0.971))
                                         .font(.title)
                                         .cornerRadius(95)
                                     
@@ -54,7 +54,7 @@ struct ContentView: View {
                                         .padding(.horizontal, 50.0)
                                         .padding(.top, 20.0)
                                         .padding(.bottom, 20.0)
-                                        .background(Color.green)
+                                        .background(Color(hue: 0.289, saturation: 0.283, brightness: 0.915))
                                         .font(.title)
                                         .cornerRadius(95)
                                     
@@ -75,7 +75,7 @@ struct ContentView: View {
                                         .padding(.horizontal, 50.0)
                                         .padding(.top, 20.0)
                                         .padding(.bottom, 20.0)
-                                        .background(Color.teal)
+                                        .background(Color(hue: 0.546, saturation: 0.24, brightness: 1.0))
                                         .font(.title)
                                         .cornerRadius(95)
                                     
@@ -97,7 +97,7 @@ struct ContentView: View {
                                         .padding(.horizontal, 50.0)
                                         .padding(.top, 20.0)
                                         .padding(.bottom, 20.0)
-                                        .background(Color.purple)
+                                        .background(Color(hue: 0.756, saturation: 0.214, brightness: 0.971))
                                         .font(.title)
                                         .cornerRadius(95)
                                     
