@@ -40,25 +40,53 @@ struct MoodTracker: View {
             }
             .padding(.vertical, 10)
             .padding()
-            .background(Color.gray)
+            .background(Color(hue: 0.11, saturation: 0.249, brightness: 0.918))
             Spacer()
             
             List{
                 
                 ForEach (moods) {moodItem in
-                    if moodItem.mood==3 {
+                    if moodItem.mood==1 {
                         ZStack {
-                            Color(.systemPurple)
+                            Color(.red)
                                 .ignoresSafeArea()
                                 
                             VStack(spacing: 20.0) {
                                 HStack() {
-                                    Text(moodItem.desc)
-                                        .font(.title)
+                                    Text(moodItem.entryDate, style: .date)
+                                        .font(.title2)
                                         .fontWeight(.bold)
                                         .multilineTextAlignment(.leading)
                                     Spacer()
-                                    Text(moodItem.desc)
+                                    Text("1")
+                                        .fontWeight(.black)
+                                        .multilineTextAlignment(.trailing)
+                                }
+                                Text(moodItem.desc)
+    
+                            }
+                            .padding(15)
+                            .background(Rectangle()
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                                .shadow(radius: 10)
+                            ).padding(15)
+                        }
+                    }
+                    else if moodItem.mood==2 {
+                        ZStack {
+                            Color(.orange)
+                                .ignoresSafeArea()
+                                
+                            VStack(spacing: 20.0) {
+                                HStack() {
+                                    Text(moodItem.entryDate, style: .date)
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                        .multilineTextAlignment(.leading)
+                                    Spacer()
+                                    Text("2")
+                                        .fontWeight(.black)
                                         .multilineTextAlignment(.trailing)
                                 }
                                 Text(moodItem.desc)
@@ -70,7 +98,86 @@ struct MoodTracker: View {
                                 .shadow(radius: 10)
                             ).padding(15)
                         }
-                    } else {
+                    }
+                    else if moodItem.mood==3 {
+                        ZStack {
+                            Color(.yellow)
+                                .ignoresSafeArea()
+                                
+                            VStack(spacing: 20.0) {
+                                HStack() {
+                                    Text(moodItem.entryDate, style: .date)
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                        .multilineTextAlignment(.leading)
+                                    Spacer()
+                                    Text("3")
+                                        .fontWeight(.black)
+                                        .multilineTextAlignment(.trailing)
+                                }
+                                Text(moodItem.desc)
+                            }
+                            .padding(15)
+                            .background(Rectangle()
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                                .shadow(radius: 10)
+                            ).padding(15)
+                        }
+                    }
+                    else if moodItem.mood==4 {
+                        ZStack {
+                            Color(.green)
+                                .ignoresSafeArea()
+                                
+                            VStack(spacing: 20.0) {
+                                HStack() {
+                                    Text(moodItem.entryDate, style: .date)
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                        .multilineTextAlignment(.leading)
+                                    Spacer()
+                                    Text("4")
+                                        .fontWeight(.black)
+                                        .multilineTextAlignment(.trailing)
+                                }
+                                Text(moodItem.desc)
+                            }
+                            .padding(15)
+                            .background(Rectangle()
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                                .shadow(radius: 10)
+                            ).padding(15)
+                        }
+                    }
+                    else if moodItem.mood==5 {
+                        ZStack {
+                            Color(.teal)
+                                .ignoresSafeArea()
+                                
+                            VStack(spacing: 20.0) {
+                                HStack() {
+                                    Text(moodItem.entryDate, style: .date)
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                        .multilineTextAlignment(.leading)
+                                    Spacer()
+                                    Text("5")
+                                        .fontWeight(.black)
+                                        .multilineTextAlignment(.trailing)
+                                }
+                                Text(moodItem.desc)
+                            }
+                            .padding(15)
+                            .background(Rectangle()
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                                .shadow(radius: 10)
+                            ).padding(15)
+                        }
+                    }
+                    else {
                         Text(moodItem.desc)
                     }
                 }

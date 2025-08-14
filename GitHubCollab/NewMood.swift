@@ -20,7 +20,7 @@ struct NewMood: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-            Text("Rate from 1 = lowest mood to 5 = highest mood")
+            Text("Rate your mood intensity")
                 .multilineTextAlignment(.center)
                 .padding(.top, 20.0)
             Picker(selection: $moodItem.mood, label: Text("Mood Level")) {
