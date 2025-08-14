@@ -43,7 +43,7 @@ struct AnxietyAttackView: View {
                                             .onAppear {
                                                 player.play()
                                             }
-                    Text("Adittional Methods")
+                    Text("Additional Methods")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
                             .padding(.horizontal, 50.0)
@@ -61,7 +61,7 @@ struct AnxietyAttackView: View {
                         .multilineTextAlignment(.leading)
                         .padding(.vertical)
                     
-                    Text("   Resoruces   ")
+                    Text("   Resources   ")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
                             .padding(.horizontal, 50.0)

@@ -42,7 +42,7 @@ struct PanickAttackView: View {
                                                 player.play()
                                             }
 
-                    Text("Adittional Methods")
+                    Text("Additional Methods")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
                             .padding(.horizontal, 50.0)
@@ -66,7 +66,7 @@ struct PanickAttackView: View {
                         .padding([.leading, .bottom, .trailing], 40.0)
 
                     
-                    Text("   Resoruces   ")
+                    Text("   Resources   ")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
                             .padding(.horizontal, 50.0)
