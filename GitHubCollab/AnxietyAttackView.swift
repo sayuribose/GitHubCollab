@@ -10,7 +10,7 @@ import AVKit
 
 struct AnxietyAttackView: View {
     
-        private let player = AVPlayer(url: Bundle.main.url(forResource: "3 min belly", withExtension: "mp4")!)
+        private let player = AVPlayer(url: Bundle.main.url(forResource: "take a deep breath", withExtension: "mp4")!)
 
     var body: some View {
         VStack{
