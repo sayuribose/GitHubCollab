@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct PanickAttackView: View {
+    
+    private let player = AVPlayer(url: Bundle.main.url(forResource: "headspace", withExtension: "mp4")!)
+    
     var body: some View {
-        VStack{
+        VStack(spacing: 30){
             HStack {
                 Spacer()
                 
@@ -24,11 +28,20 @@ struct PanickAttackView: View {
             .padding(.vertical, 10)
             .padding()
             .background(Color(hue: 0.933, saturation: 0.214, brightness: 0.971))
-            Spacer()
+            
             ScrollView{
-                Text("ADD VIDEO HERE")
+            
                 
                 VStack{
+                    
+                    VideoPlayer(player: player)
+                                            .frame(height: 250)
+                                            .cornerRadius(12)
+                                            .padding(.horizontal)
+                                            .onAppear {
+                                                player.play()
+                                            }
+
                     Text("Adittional Methods")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
