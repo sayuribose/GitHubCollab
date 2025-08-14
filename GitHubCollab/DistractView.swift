@@ -26,7 +26,7 @@ struct DistractView: View {
             .background(Color(hue: 0.756, saturation: 0.214, brightness: 0.971))
             Spacer()
             ScrollView{
-                Text("ADD VIDEO HERE")
+                //Text("ADD VIDEO HERE")
                 
                 VStack{
                     Text("Adittional Methods")
