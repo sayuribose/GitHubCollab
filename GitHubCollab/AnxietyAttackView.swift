@@ -34,7 +34,7 @@ struct AnxietyAttackView: View {
             ScrollView{
                 
                 // isert text here
-                VStack(spacing: 30){
+                VStack{
                     
                     VideoPlayer(player: player)
                                             .frame(height: 250)
@@ -52,7 +52,15 @@ struct AnxietyAttackView: View {
                             .background(Color(hue: 0.289, saturation: 0.283, brightness: 0.915))
                             .font(.title2)
                             .cornerRadius(95)
-                            .padding(.vertical, 200)
+                            .padding(.vertical)
+                    Text("Five Senses Exercise")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                    
+                    Text(" 5 things you can see \n 4 things you can touch \n 3 things you can hear \n 2 things you can smell \n 1 thing you can taste")
+                        .multilineTextAlignment(.leading)
+                        .padding(.vertical)
+                    
                     Text("   Resoruces   ")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
@@ -62,6 +70,11 @@ struct AnxietyAttackView: View {
                             .background(Color(hue: 0.289, saturation: 0.283, brightness: 0.915))
                             .font(.title2)
                             .cornerRadius(95)
+                            .padding(.vertical)
+                    
+                    Link("Anxiety self-help guide",
+                                 destination: URL(string: "https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-self-help-guides/anxiety-self-help-guide/")!)
+                    
                 } // end of vstack
 
             }
