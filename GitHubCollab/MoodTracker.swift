@@ -63,7 +63,6 @@ struct MoodTracker: View {
                                         .multilineTextAlignment(.trailing)
                                 }
                                 Text(moodItem.desc)
-    
                             }
                             .padding(15)
                             .background(Rectangle()
