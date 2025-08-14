@@ -29,7 +29,7 @@ struct OverstimView: View {
                 //Text("ADD VIDEO HERE")
                 
                 VStack{
-                    Text("Adittional Methods")
+                    Text("Additional Methods")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
                             .padding(.horizontal, 50.0)
@@ -39,7 +39,7 @@ struct OverstimView: View {
                             .font(.title2)
                             .cornerRadius(95)
                             .padding(.vertical, 200)
-                    Text("   Resoruces   ")
+                    Text("   Resources   ")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
                             .padding(.horizontal, 50.0)
