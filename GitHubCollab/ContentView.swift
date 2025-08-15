@@ -32,19 +32,19 @@ struct ContentView: View {
                         //                                .padding(.trailing, 250) // pushes image left from the right edge
                         //                                                    }
                         
-                        HStack{
-                            Button{
-                                withAnimation{
-                                    showMenu = true
-                                }
-                            } label: {
-                                Text("+")
-                                    .font(.title)
-                                    .fontWeight(.bold)
-                            }
-                            Spacer()
-                        }
-                        .padding()
+//                        HStack{
+//                            Button{
+//                                withAnimation{
+//                                    showMenu = true
+//                                }
+//                            } label: {
+//                                Text("+ Mood Tracker")
+//                                    .font(.title)
+//                                    .fontWeight(.bold)
+//                            }
+//                            Spacer()
+//                        }
+//                        .padding()
                         
                         
                         
@@ -152,6 +152,32 @@ struct ContentView: View {
                             
                         }
                         .padding()
+                        ZStack{
+                            Image("rainbow")
+                                .resizable()
+                        Button {
+                            
+                        } label: {
+                            
+                            NavigationLink(destination: MoodTracker()) {
+                                Text("Mood Tracker")
+                                    .font(.system(size: 29, weight: .light, design: .monospaced))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.black)
+                                    .padding(.horizontal, 50.0)
+                                    .padding(.top, 20.0)
+                                    .padding(.bottom, 20.0)
+//                                    .background(Color(hue: 0.756, saturation: 0.214, brightness: 0.971))
+                                
+//                                    .cornerRadius(95)
+                                
+                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                            } // nav link end
+                            .padding()
+                            
+                            
+                        }
+                        }.frame(width: 350.0, height: 75.0).cornerRadius(95)
                     }
                 }
             } // end of VStack
@@ -160,34 +186,34 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true) // hides Home title from user in root view
         } // end of NavStack
-        if showMenu {
-            HStack {
-                       VStack(spacing: 20) {
-                           Button("Mood Tracker") { }
-                               .padding()
-                               .background(Color.gray.opacity(0.3))
-                               .cornerRadius(40)
-
-                           Button("Contact") { }
-                               .padding()
-                               .background(Color.gray.opacity(0.3))
-                               .cornerRadius(40)
-
-                           Button("About") { }
-                               .padding()
-                               .background(Color.gray.opacity(0.3))
-                               .cornerRadius(40)
-
-                           Spacer()
-                       }
-                       .frame(width: 200)
-                       .background(Color.white) // <- Menu background
-                       .edgesIgnoringSafeArea(.all) // Covers under safe areas
-                       Spacer()
-                   }
-                   .transition(.move(edge: .leading))
-                   .animation(.easeOut(duration: 0.3), value: showMenu)
-               }
+//        if showMenu {
+//            HStack {
+//                       VStack(spacing: 20) {
+//                           Button("Mood Tracker") { }
+//                               .padding()
+//                               .background(Color.gray.opacity(0.3))
+//                               .cornerRadius(40)
+//
+//                           Button("Contact") { }
+//                               .padding()
+//                               .background(Color.gray.opacity(0.3))
+//                               .cornerRadius(40)
+//
+//                           Button("About") { }
+//                               .padding()
+//                               .background(Color.gray.opacity(0.3))
+//                               .cornerRadius(40)
+//
+//                           Spacer()
+//                       }
+//                       .frame(width: 200)
+//                       .background(Color.white) // <- Menu background
+//                       .edgesIgnoringSafeArea(.all) // Covers under safe areas
+//                       Spacer()
+//                   }
+//                   .transition(.move(edge: .leading))
+//                   .animation(.easeOut(duration: 0.3), value: showMenu)
+//               }
            }
     }
     
